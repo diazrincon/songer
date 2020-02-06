@@ -67,8 +67,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
 
-app.post("/upload", upload.single('song'), (req, res) => {
-  var name = req.file.originalname;
+app.post("/upload", (req, res) => {
   axios
     .post(argHost + '/upload', {
       name: req.body.name,
