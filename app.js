@@ -16,8 +16,6 @@ let argHost = args[0];
 let argPort = args[1];
 let localSongs = [];
 let songs = [];
-const songsFolder = path.join(__dirname, "public", "songs");
-const songsPath = path.join(__dirname, "public", "songs", "songs.json");
 
 let multerOptions = multer.diskStorage({
   destination: (req, file, cb) => {
