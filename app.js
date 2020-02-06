@@ -70,7 +70,7 @@ app.post("/upload", (req, res) => {
   axios
     .post(argHost + '/upload', {
       name: req.body.name,
-      src: req.ip
+      src: req.boddy.src
     })
     .then(function(response) {
       res.sendStatus(200);
